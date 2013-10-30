@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 
   // go through each string in argv
   for (i = 1; i < argc; i++) {
-    printf ("arg %d: %s\n", i, argv[i]);
+    printf("arg %d: %s\n", i, argv[i]);
   }
 
   char *states[] = {
