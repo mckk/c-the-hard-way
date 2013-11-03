@@ -5,7 +5,7 @@ all: ex1-ex10 ex11-ex20
 
 ex1-ex10: ex1 ex3 ex4 ex5 ex6 ex7 ex8 ex9 ex10
 
-ex11-ex20: ex11 ex12 ex13 ex14 ex15 ex16 ex17 ex17-singleconnection
+ex11-ex20: ex11 ex12 ex13 ex14 ex15 ex16 ex17 ex17-singleconnection ex18
 
 clean:
 	rm -Rf ex1 ex1.dSYM
@@ -25,3 +25,4 @@ clean:
 	rm -Rf ex16 ex16.dSYM
 	rm -Rf ex17 ex17.dSYM
 	rm -Rf ex17-singleconnection ex17-singleconnection.dSYM
+	rm -Rf ex18 ex18.dSYM
