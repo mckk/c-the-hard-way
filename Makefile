@@ -1,12 +1,14 @@
 CFLAGS=-Wall -g
 
-all: ex1-ex10 ex11-ex20 ex22-main
+all: ex1-ex10 ex11-ex20 ex21-ex30
+
+ex21-ex30: ex22-main ex23
 
 ex22-main: ex22.o 
 
-ex1-ex10: ex1 ex3 ex4 ex5 ex6 ex7 ex8 ex9 ex10
-
 ex11-ex20: ex11 ex12 ex13 ex14 ex15 ex16 ex17 ex17-singleconnection ex18 ex20
+
+ex1-ex10: ex1 ex3 ex4 ex5 ex6 ex7 ex8 ex9 ex10
 
 clean:
 	rm -Rf ex1 ex1.dSYM
@@ -29,3 +31,4 @@ clean:
 	rm -Rf ex18 ex18.dSYM
 	rm -Rf ex20 ex20.dSYM
 	rm -Rf ex22-main ex22.o ex22-main.dSYM
+	rm -Rf ex23 ex23.dSYM
