@@ -5,7 +5,7 @@
 #define DB_DIR "/usr/local/.devpkg"
 
 int DB_init();
-int db_list();
+int DB_list();
 int DB_update(const char *url);
 int DB_find(const char *url);
 

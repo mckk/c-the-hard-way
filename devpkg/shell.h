@@ -24,7 +24,8 @@ extern Shell CLEANUP_SH;
 extern Shell GIT_SH;
 extern Shell TAR_SH;
 extern Shell CURL_SH;
+extern Shell CONFIGURE_SH;
 extern Shell MAKE_SH;
-extern Shell INSTAL_SH;
+extern Shell INSTALL_SH;
 
 #endif
