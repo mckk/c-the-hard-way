@@ -2,7 +2,7 @@ CFLAGS=-Wall -g
 
 all: ex1-ex10 ex11-ex20 ex21-ex30
 
-ex21-ex30: ex22-main ex23 ex24
+ex21-ex30: ex22-main ex23 ex24 ex27
 
 ex22-main: ex22.o 
 
@@ -33,3 +33,4 @@ clean:
 	rm -Rf ex22-main ex22.o ex22-main.dSYM
 	rm -Rf ex23 ex23.dSYM
 	rm -Rf ex24 ex24.dSYM
+	rm -Rf ex27 ex27.dSYM
