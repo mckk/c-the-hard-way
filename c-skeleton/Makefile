@@ -1,4 +1,4 @@
-CFLAGS=-g -o2 -Wall -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)
+CFLAGS=-g -o2 -Wall -Wextra -Isrc -DNDEBUG $(OPTFLAGS)
 LIBS=-ldl $(OPTLIBS)
 PREFIX?=/usr/local
 
@@ -17,7 +17,6 @@ all: $(TARGET) $(SO_TARGET) tests
 dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)
 dev: all
 
-$(TARGET): CFLAGS += -fPIC
 $(TARGET): build $(OBJECTS)
 			 ar rcs $@ $(OBJECTS)
 			 ranlib $@
