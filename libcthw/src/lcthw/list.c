@@ -60,6 +60,20 @@ void List_clear_destroy(List *list)
   free(list);
 }
 
+List *List_shallow_copy(List *list)
+{
+  assert(list);
+  assert(check_invariant(list) && "List invariant has to be valid on entry");
+
+  List *copy = List_create();
+
+  LIST_FOREACH(list, first, next, cur) {
+    List_push(copy, cur->value);
+  }
+
+  return copy;
+}
+
 void List_push(List *list, void *value)
 {
   assert(list);

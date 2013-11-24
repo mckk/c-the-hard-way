@@ -22,6 +22,12 @@ void List_destroy(List *list);
 void List_clear(List *list);
 void List_clear_destroy(List *list);
 
+/*
+ * Returns a pointer to a shallow copy of list.
+ * The values are not copied, but the internal structure is.
+ */
+List *List_shallow_copy(List *list);
+
 void List_push(List *list, void *value);
 void *List_pop(List *list);
 

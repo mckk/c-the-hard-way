@@ -18,6 +18,9 @@ char *test_create()
 char *test_destroy()
 {
   List_clear_destroy(list);
+  
+  List *empty = List_create();
+  List_clear_destroy(empty);
 
   return NULL;
 }
@@ -88,6 +91,26 @@ char *test_shift()
   return NULL;
 }
 
+char *test_shallow_copy()
+{
+  char *test1 = "one";
+  char *test2 = "two";
+
+  List *list = List_create();
+  List_push(list, test1);
+  List_push(list, test2);
+
+  List *copy = List_shallow_copy(list);
+  List_destroy(list);
+
+  mu_assert(List_pop(copy) == test2, "The last element of the copied list is not right");
+  mu_assert(List_pop(copy) == test1, "The first element of the copied list is not right");
+
+  List_destroy(copy);
+  
+  return NULL;
+}
+
 char *all_tests() {
   mu_suite_start();
 
@@ -97,6 +120,7 @@ char *all_tests() {
   mu_run_test(test_remove);
   mu_run_test(test_shift);
   mu_run_test(test_destroy);
+  mu_run_test(test_shallow_copy);
 
   return NULL;
 }
